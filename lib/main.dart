@@ -16,7 +16,7 @@ class NotesApp extends StatelessWidget {
       /*if you want to edit something in theme data 👇 */
       theme: ThemeData(
         fontFamily: "Poppins",
-        brightness: Brightness.dark,
+        brightness: Brightness.light,
         // scaffoldBackgroundColor: Colors.brown[600],
       ),
       home: const NotesView(),
