@@ -57,7 +57,7 @@ class _ColorsListviewState extends State<ColorsListview> {
                 currentIndex = index;
                 BlocProvider.of<AddNoteCubit>(context).color = colors[index];
                 setState(() {});
-              },ك
+              },
               child: ColorItem(
                 color: colors[index],
                 isActive: currentIndex == index,
