@@ -48,6 +48,9 @@ class _AddNoteFormState extends State<AddNoteForm> {
             hintText: "content",
             maxLines: 5,
           ),
+          const SizedBox(
+            height: 32,
+          ),
           const ColorsListview(),
           const SizedBox(
             height: 32,
@@ -85,5 +88,3 @@ class _AddNoteFormState extends State<AddNoteForm> {
     );
   }
 }
-
-
