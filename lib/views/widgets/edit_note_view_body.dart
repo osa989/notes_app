@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:notes_app/constants.dart';
-import 'package:notes_app/cubits/add_note_cubit/add_note_cubit.dart';
 import 'package:notes_app/cubits/notes_cubit/notes_cubit.dart';
 import 'package:notes_app/models/note_model.dart';
-import 'package:notes_app/views/widgets/colors_list_view.dart';
 import 'package:notes_app/views/widgets/custom_app_bar.dart';
 import 'package:notes_app/views/widgets/custom_text_field.dart';
 import 'package:notes_app/views/widgets/edit_colors_notes_list_view.dart';
@@ -43,10 +40,12 @@ class _EditNoteViewBodyState extends State<EditNoteViewBody> {
             height: 20,
           ),
           CustomTextField(
-              onChanged: (value) {
-                title = value;
-              },
-              hintText: widget.note.title),
+            onChanged: (value) {
+              title = value;
+            },
+            hintText: widget.note.title,
+            initialValue: widget.note.title,
+          ),
           const SizedBox(
             height: 16,
           ),
@@ -56,6 +55,7 @@ class _EditNoteViewBodyState extends State<EditNoteViewBody> {
             },
             hintText: widget.note.subTitle,
             maxLines: 5,
+            initialValue: widget.note.subTitle,
           ),
           const SizedBox(
             height: 16,
